@@ -68,10 +68,10 @@ Using Pages with a Git connection is the most reliable way to avoid “losing”
 
 This repo includes `public/_redirects` so Vue Router routes work on Cloudflare Pages (SPA fallback).
 
-### If you want to deploy a single HTML file (your `AI-BizWay-Complete-Site.html`)
+### If you want to deploy a single static HTML file
 
-Put the file in `public/` so it gets copied into `dist/` at build time:
+Put your HTML file (for example, `your-custom-page.html`) in `public/` so it gets copied into `dist/` at build time:
 
-- `public/AI-BizWay-Complete-Site.html` → deployed at `/AI-BizWay-Complete-Site.html`
+- `public/your-custom-page.html` → deployed at `/your-custom-page.html`
 
 If you want that HTML to be your homepage, replace the root `index.html` with your file content (note: that bypasses the Vue app).
