@@ -59,7 +59,7 @@ pnpm preview
 
 ## Deploy on Cloudflare Pages (recommended)
 
-Using Pages with a Git connection is the most reliable way to avoid “losing” the site (every push redeploys the same build).
+Using Pages with a Git connection is the most reliable way to avoid “losing” the site (every push automatically triggers a new deployment).
 
 - **Framework preset**: `Vite`
 - **Build command**: `pnpm install --frozen-lockfile && pnpm build`
