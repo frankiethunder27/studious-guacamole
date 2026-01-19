@@ -56,3 +56,22 @@ Locally preview production build:
 ```bash
 pnpm preview
 ```
+
+## Deploy on Cloudflare Pages (recommended)
+
+Using Pages with a Git connection is the most reliable way to avoid “losing” the site (every push automatically triggers a new deployment).
+
+- **Framework preset**: `Vite`
+- **Build command**: `pnpm install --frozen-lockfile && pnpm build`
+- **Build output directory**: `dist`
+- **Node version**: `22` (matches CI)
+
+This repo includes `public/_redirects` so Vue Router routes work on Cloudflare Pages (SPA fallback).
+
+### If you want to deploy a single static HTML file
+
+Put your HTML file (for example, `your-custom-page.html`) in `public/` so it gets copied into `dist/` at build time:
+
+- `public/your-custom-page.html` → deployed at `/your-custom-page.html`
+
+If you want that HTML to be your homepage, replace the root `index.html` with your file content (note: that bypasses the Vue app).
